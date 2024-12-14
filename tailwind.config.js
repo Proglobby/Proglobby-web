@@ -8,10 +8,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "rgb(var(--primary))",
+        secondary: "var(--scondary)",
+        bg: "var(--gradient-bg)",
+        btngradient: "var(--btn-gradient)", 
       },
     },
   },
+  darkMode: "class",  
   plugins: [],
 };

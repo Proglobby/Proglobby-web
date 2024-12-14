@@ -2,20 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Theme Variables */
+
+a, button, .btn {
+  @apply cursor-pointer;
+}
+:root{
+  --purple: #966de3;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.light {
+  --primary: 0, 0, 0;
+  --scondary: #ffffff;
+  --gradient-bg: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
+  --btn-gradient: linear-gradient(to right, #232526 0%, #414345  51%, #232526  100%); 
+  background: var(--gradient-bg);
+  transition: 0.5s;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.dark {
+  --primary: 255, 255, 255;
+  --scondary: rgb(186, 186, 186);
+  --gradient-bg: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+  --btn-gradient: linear-gradient(to right, #ECE9E6 0%, #FFFFFF  51%, #ECE9E6  100%);
+  background-blend-mode: multiply;
+  background: var(--gradient-bg);
+  transition: 0.5s;
+}
+
+/* Button Styles */
+.btn-grad {
+  margin: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: var(--purple);
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  background-image: var(--btn-gradient); /* Use theme variable */
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  text-decoration: none;
 }
