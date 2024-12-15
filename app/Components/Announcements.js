@@ -1,7 +1,9 @@
 import React from 'react'
-
+import Link from 'next/link'
+import { IoIosClose } from "react-icons/io";
+import { useRouter } from 'next/router';
 const Announcements = () => {
-  const announcements = [
+  var announcements = [
     {
       title: "Proglobby Standouts Sessions",
       description: "Join us on Discord",
@@ -15,14 +17,18 @@ const Announcements = () => {
   ]
   return (
     <div className='w-screen order-1 lg:w-[20%] lg:order-2'>
-      <div className="text-primary font-jetbrains">
+      <div className="text-primary font-avenir">
         <ul className="text-start">
           {announcements.map((announcement, index) => (
-            <li key={index}>
-              <div className='glassCard p-[20px]'>
-                <h3>{announcement.title}</h3>
-                <p>{announcement.description}</p>
-              </div>
+            <li key={index} className='mx-[60px] lg:mx-[8px] my-[20px] cursor-pointer transition-transform hover:translate-y-[-8px]'>
+              
+                <div className='glassCard p-[20px]'>
+                  <div className='flex justify-end -m-[10px]'>
+                    <IoIosClose className='hover:text-red-600' onClick={()=> announcements.splice(index, 1)}/>
+                  </div>
+                  <h1 className='text-xl'>{announcement.title}</h1>
+                  <p className=''>{announcement.description}</p>
+                </div>
             </li>
           ))}
         </ul>
