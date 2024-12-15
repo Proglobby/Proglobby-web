@@ -1,21 +1,12 @@
-"use client"
-import NavBar from "./Components/NavBar";
-import { useEffect } from "react";
+"use client";
+import Announcements from "./Components/Announcements";
+import Banner from "./Components/Banner";
 export default function App() {
-  useEffect(() => {
-    const currentTheme = localStorage.getItem("theme");
-    if (currentTheme === "light") {
-      document.documentElement.classList.add("light");
-      document.documentElement.classList.remove("dark");
-    }else{
-      document.documentElement.classList.add("dark");
-      document.documentElement.classList.remove("light");
-    }
-  }, []);
   return (
-      <div className="trasform transition-[0.5s] duration-500">
-        
-      </div>
+    <div className="flex h-full flex-col lg:inline-flex gap-2 lg:flex-row">
+      <Banner />
+      <Announcements />
+    </div>
   );
 
 }

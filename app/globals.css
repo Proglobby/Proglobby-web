@@ -3,12 +3,36 @@
 @tailwind utilities;
 
 /* Theme Variables */
-
+body{
+  overflow-x: hidden;
+}
 a, button, .btn {
   @apply cursor-pointer;
 }
+
+*{
+  font-family: ;
+}
 :root{
   --purple: #966de3;
+}
+
+@font-face {
+  font-family: 'JetBrains-Bold';
+  src: url('./fonts/JetBrainsMono-ExtraBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains';
+  src: url('./fonts/JetBrainsMonoNL-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('./fonts/AvenirLTStd-Black.otf') format('opentype');
+}
+h1{
+  font-family: 'JetBrains', sans-serif;
 }
 
 .light {
@@ -47,4 +71,13 @@ a, button, .btn {
 .btn-grad:hover {
   background-position: right center;
   text-decoration: none;
+}
+
+.glassCard{
+  background: rgba( --primary, 0.8 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 20px );
+  -webkit-backdrop-filter: blur( 20px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }

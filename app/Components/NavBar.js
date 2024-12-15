@@ -23,7 +23,7 @@ const NavBar = () => {
       <div className='flex items-center mr-10'>
       <ul className="flex items-center gap-10 mr-[100px] ">
         {sections.map((section, index) => (
-          <li key={index} className="text-white capitalize text-lg">
+          <li key={index} className="capitalize text-lg text-primary">
             <Link href={section.href}>{section.name}</Link>
           </li>
         ))}
