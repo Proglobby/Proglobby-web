@@ -28,6 +28,7 @@ const ThemeToggle = () => {
       <FaMoon size={18}/>
       <div className='absolute h-6 w-6 rounded-full bg-primary transform transition-[0.5s] duration-500' 
       style={lightMode ? {left:"2px"} : {right: "2px"}}></div>
+      <FaSun size={18} className='ml-auto text-yellow-500'/>
     </div>
   )
 }

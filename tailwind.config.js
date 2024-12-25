@@ -13,6 +13,10 @@ module.exports = {
         bg: "var(--gradient-bg)",
         btngradient: "var(--btn-gradient)", 
       },
+      fontFamily:{
+        jetbrains:['JetBrains-Bold', 'serif'],
+        avenir:['Avenir', 'serif'],
+      }
     },
   },
   darkMode: "class",  

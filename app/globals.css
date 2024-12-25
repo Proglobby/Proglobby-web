@@ -3,20 +3,43 @@
 @tailwind utilities;
 
 /* Theme Variables */
-
+body{
+  overflow-x: hidden;
+  background: var(--gradient-bg);
+  background-attachment: fixed;
+}
 a, button, .btn {
   @apply cursor-pointer;
+}
+
+*{
+  font-family: 'Avenir', sans-serif;
 }
 :root{
   --purple: #966de3;
 }
 
+@font-face {
+  font-family: 'JetBrains-Bold';
+  src: url('./fonts/JetBrainsMono-ExtraBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains';
+  src: url('./fonts/JetBrainsMonoNL-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('./fonts/AvenirLTStd-Black.otf') format('opentype');
+}
+
+
 .light {
   --primary: 0, 0, 0;
   --scondary: #ffffff;
   --gradient-bg: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
-  --btn-gradient: linear-gradient(to right, #232526 0%, #414345  51%, #232526  100%); 
-  background: var(--gradient-bg);
+  --btn-gradient: linear-gradient(to right, #232526 0%, #414345  51%, #232526  100%);
   transition: 0.5s;
 }
 
@@ -25,8 +48,7 @@ a, button, .btn {
   --scondary: rgb(186, 186, 186);
   --gradient-bg: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
   --btn-gradient: linear-gradient(to right, #ECE9E6 0%, #FFFFFF  51%, #ECE9E6  100%);
-  background-blend-mode: multiply;
-  background: var(--gradient-bg);
+
   transition: 0.5s;
 }
 
@@ -47,4 +69,13 @@ a, button, .btn {
 .btn-grad:hover {
   background-position: right center;
   text-decoration: none;
+}
+
+.glassCard{
+  background: rgba( --primary, 0.8 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 20px );
+  -webkit-backdrop-filter: blur( 20px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }

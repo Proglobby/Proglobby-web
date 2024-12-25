@@ -24,8 +24,7 @@ export default function RootLayout({ children }) {
   
   return (
     <html lang="en">
-      <body className="min-h-screen w-screen"
-      >
+      <body className="h-screen w-screen flex flex-col">
         <NavBar/>
         {children}
       </body>
