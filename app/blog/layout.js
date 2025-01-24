@@ -1,4 +1,4 @@
-import "../styles.css";
+import "../global.css";
 export const metadata = {
     title: "Proglobby | Login",
     description: "Programming Lobby for everyone",
