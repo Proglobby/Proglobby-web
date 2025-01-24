@@ -1,9 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
 import { IoIosClose } from "react-icons/io";
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 const Announcements = () => {
-  var announcements = [
+  const [announcements, setAnnouncements] = useState([
     {
       title: "Proglobby Standouts Sessions",
       description: "Join us on Discord",
@@ -14,7 +15,7 @@ const Announcements = () => {
       description: "We are excited to announce the launch of our new course on React",
       link: "/courses/react",
     },
-  ]
+  ]);
   return (
     <div className='w-screen order-1 lg:w-[20%] lg:order-2'>
       <div className="text-primary font-avenir">
@@ -24,7 +25,7 @@ const Announcements = () => {
               
                 <div className='glassCard p-[20px]'>
                   <div className='flex justify-end -m-[10px]'>
-                    <IoIosClose className='hover:text-red-600' onClick={()=> announcements.splice(index, 1)}/>
+                    <IoIosClose className='hover:text-red-600'/>
                   </div>
                   <h1 className='text-xl'>{announcement.title}</h1>
                   <p className=''>{announcement.description}</p>
