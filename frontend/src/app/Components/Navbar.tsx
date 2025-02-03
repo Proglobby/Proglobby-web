@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from './Button'
+import NavComp from './NavComp';
 const isAuthenticated = false;
 const username = "User";
 const Navbar = () => {
@@ -14,22 +15,10 @@ const Navbar = () => {
                     <span className="text-2xl font-bold text-white">Proglobby</span>
                 </a>
                 <div className="hidden md:flex items-center space-x-6">
-                    <a href="/" className="nav-link text-gray-300 hover:text-purple-400 px-4 py-2 transition-all duration-300 relative group">
-                    Home
-                    <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-purple-500 transition-all duration-300 group-hover:w-full"></span>
-                    </a>
-                    <a href="/blog" className="nav-link text-gray-300 hover:text-purple-400 px-4 py-2 transition-all duration-300 relative group">
-                    Blog
-                    <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-purple-500 transition-all duration-300 group-hover:w-full"></span>
-                    </a>
-                    <a href="/learn" className="nav-link text-gray-300 hover:text-purple-400 px-4 py-2 transition-all duration-300 relative group">
-                    Learn
-                    <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-purple-500 transition-all duration-300 group-hover:w-full"></span>
-                    </a>
-                    <a href="/about" className="nav-link text-gray-300 hover:text-purple-400 px-4 py-2 transition-all duration-300 relative group">
-                    About
-                    <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-purple-500 transition-all duration-300 group-hover:w-full"></span>
-                    </a>
+                    <NavComp text="Home" href="/" />
+                    <NavComp text="Blog" href="/blog" />
+                    <NavComp text="Learn" href="/learn" />
+                    <NavComp text="About" href="/about" />
                 </div>
                 </div>
                 <div className="flex items-center space-x-4">
