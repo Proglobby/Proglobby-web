@@ -38,7 +38,7 @@ const Navbar = () => {
                     <Link href="/login" className="px-4 py-2 text-purple-400 hover:text-white transition-all duration-300 hover:bg-purple-600/20 rounded-lg">
                         Sign In
                     </Link>
-                    <Button text="Sign Up" />
+                    <Button text="Sign Up" path="/registration"/>
                     </>
                 )}
                 </div>
