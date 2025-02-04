@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from './Button'
 import NavComp from './NavComp';
+import Link from 'next/link';
 const isAuthenticated = false;
 const username = "User";
 const Navbar = () => {
@@ -28,15 +29,15 @@ const Navbar = () => {
                         {username}
                     </button>
                     <div className="absolute right-0 mt-2 w-48 bg-gray-800/90 border border-gray-700/30 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <a href="/profile" className="block px-4 py-2 text-gray-300 hover:bg-purple-600/20 hover:text-white">Profile</a>
-                        <a href="/logout" className="block px-4 py-2 text-gray-300 hover:bg-purple-600/20 hover:text-white">Logout</a>
+                        <Link href="/profile" className="block px-4 py-2 text-gray-300 hover:bg-purple-600/20 hover:text-white">Profile</Link>
+                        <Link href="/logout" className="block px-4 py-2 text-gray-300 hover:bg-purple-600/20 hover:text-white">Logout</Link>
                     </div>
                     </div>
                 ) : (
                     <>
-                    <a href="/login" className="px-4 py-2 text-purple-400 hover:text-white transition-all duration-300 hover:bg-purple-600/20 rounded-lg">
+                    <Link href="/login" className="px-4 py-2 text-purple-400 hover:text-white transition-all duration-300 hover:bg-purple-600/20 rounded-lg">
                         Sign In
-                    </a>
+                    </Link>
                     <Button text="Sign Up" />
                     </>
                 )}

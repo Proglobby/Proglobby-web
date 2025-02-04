@@ -1,13 +1,12 @@
-import Button from "./Components/Button";
-import Navbar from "./Components/Navbar";
+import Button from "../Components/Button";
+import Navbar from "../Components/Navbar";
 export default function Home() {
   const isAuthenticated = false; // Replace with actual authentication logic
   const username = "User"; // Replace with actual username logic
 
   return (
     <>
-      <Navbar />
-
+    
       <section className="pt-40 pb-32 relative overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto transform transition-all duration-500 hover:scale-[1.01]">
